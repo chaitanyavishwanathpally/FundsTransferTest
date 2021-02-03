@@ -79,7 +79,7 @@ public class TAccountTransactionDtls implements java.io.Serializable  {
 		this.transferAmt = transferAmt;
 	}
 	
-	@Column(name="STATUS")
+	@Column(name="STATUS",insertable = false, updatable = false)
 	public String getStatus() {
 		return status;
 	}
