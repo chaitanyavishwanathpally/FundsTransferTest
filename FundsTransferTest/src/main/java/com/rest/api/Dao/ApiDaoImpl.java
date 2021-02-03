@@ -157,6 +157,7 @@ public class ApiDaoImpl implements ApiDao {
 		catch(Exception e)
 		{
 			e.printStackTrace();
+			TransactionAspectSupport.currentTransactionStatus().setRollbackOnly();
 			result="Unexpected error has occured.Please try again later";
 		}
 		return result;
